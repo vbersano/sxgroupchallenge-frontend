@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+.bg-blue {
+    background-color: #55afd9;
+}
+
+.text-blue {
+    color: #55afd9;
+}
+
+.fw-700 {
+    font-weight: 600;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+.userpfp {
+    object-fit: cover;
+    object-position: 50% 0;
+}
