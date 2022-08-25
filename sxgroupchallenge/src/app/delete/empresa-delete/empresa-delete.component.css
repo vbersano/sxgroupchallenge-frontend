@@ -11,7 +11,7 @@ a {
 }
 
 .glass {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.5);
     box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.423);
     backdrop-filter: blur(5.9px);
     -webkit-backdrop-filter: blur(6px);
@@ -22,8 +22,8 @@ a {
 
 .userpfp {
     border-radius: 20px;
-    width: 75px;
-    height: 75px;
+    width: 80px;
+    height: 80px;
 }
 
 label {
@@ -44,7 +44,7 @@ label {
 }
 
 .userpfp.navpfp {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    border-radius: 15%;
+    width: 100px;
+    height: 100px;
 }

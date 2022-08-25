@@ -1,53 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
 .bg-blue {
-    background-color: #55afd9;
+
+  background-image: radial-gradient(circle at 120.71% 50%, #6ea6b7 0, #3cb5f2 50%, #0085ce 100%);
+
 }
 
 .text-blue {
-    color: #55afd9;
+  color: #55afd9;
 }
 
 .fw-700 {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .fw-800 {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 .fw-400 {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .userpfp {
-    object-fit: cover;
-    object-position: 50% 0;
+  object-fit: cover;
+  object-position: 50% 0;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* width */
 ::-webkit-scrollbar {
-    width: 7px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #000000; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #55afd9;
-    border-radius: 3px;
-  }
-  
-  .fs-54 {
-    font-size: 54;
-  }
+  width: 7px;
+}
 
-  html {
-    scroll-behavior: smooth;
-  }
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #55afd9;
+  border-radius: 3px;
+}
+
+.fs-54 {
+  font-size: 54;
+}
+
+html {
+  scroll-behavior: smooth;
+}

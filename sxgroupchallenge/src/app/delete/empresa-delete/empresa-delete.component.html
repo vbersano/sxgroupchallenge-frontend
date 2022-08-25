@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+
+<div class="background d-flex justify-content-center align-items-center">
+
+    <div class="row p-5 m-0">
+
+        <div class="mx-auto d-flex justify-content-center text-center">
+
+            <div class="card border-info mb-3 text-light glass" style="min-width: 25rem;">
+                <div class="card-header border-info">
+                    <h3 class="text-info">Apagar Empresa</h3>
+                </div>
+
+                <div class="card-body border-info">
+
+                    <div class="mb-3 pb-2 pt-2 text-start">
+
+                        <div class="row d-flex justify-content-center text-center pt-4">
+
+                            <img src="{{empresa.foto}}" alt="user pfp" class="userpfp navpfp p-0 border-info" />
+
+                            <h2 class="pt-3"> {{empresa.nome}} </h2>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="card-footer border-info pb-3 pt-3">
+
+                    <a routerLink="/mainpage" type="submit" class="btn btn-outline-info me-3"
+                        routerLink="/mainpage">Cancelar</a>
+                    <a type="submit" class="btn btn-info" (click)='apagar()'>Apagar</a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>

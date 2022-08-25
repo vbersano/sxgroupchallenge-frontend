@@ -1,3 +1,5 @@
+import { EmpresaDeleteComponent } from './delete/empresa-delete/empresa-delete.component';
+import { EmpresaEditComponent } from './edit/empresa-edit/empresa-edit.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
@@ -11,7 +13,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'mainpage', component: InicioComponent },
-  { path: 'empresa', component: EmpresaComponent }
+  { path: 'empresa', component: EmpresaComponent },
+  { path: 'empresa-edit/:id', component: EmpresaEditComponent  },
+  { path: 'empresa-delete/:id', component: EmpresaDeleteComponent  }
 
 ];
 

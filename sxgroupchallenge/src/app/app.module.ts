@@ -1,6 +1,7 @@
+import { TokenInterceptorService } from './service/token-interceptor.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy } from '@angular/common';
 import { LocationStrategy } from '@angular/common';
@@ -18,6 +19,8 @@ import { AlertasService } from './service/alertas.service';
 import { InicioComponent } from './inicio/inicio.component';
 import { MaskApplierService, NgxMaskModule } from 'ngx-mask';
 import { EmpresaComponent } from './empresa/empresa.component';
+import { EmpresaEditComponent } from './edit/empresa-edit/empresa-edit.component';
+import { EmpresaDeleteComponent } from './delete/empresa-delete/empresa-delete.component';
 
 
 
@@ -31,7 +34,9 @@ import { EmpresaComponent } from './empresa/empresa.component';
     SignupComponent,
     NavbarmainComponent,
     InicioComponent,
-    EmpresaComponent
+    EmpresaComponent,
+    EmpresaEditComponent,
+    EmpresaDeleteComponent
   ],
   imports: [
     BrowserModule,
@@ -42,8 +47,9 @@ import { EmpresaComponent } from './empresa/empresa.component';
     NgxMaskModule.forRoot()
   ],
   providers: [{
-    provide: LocationStrategy,
-    useClass: HashLocationStrategy
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptorService,
+    multi: true
   }],
   bootstrap: [AppComponent]
 })
