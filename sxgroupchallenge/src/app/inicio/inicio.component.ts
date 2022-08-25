@@ -1,4 +1,7 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
+import { Colaborador } from '../model/Colaborador';
 
 @Component({
   selector: 'app-inicio',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+  colaborador: Colaborador = new Colaborador
 
-  ngOnInit(): void {
+  id = environment.id
+  nome = environment.nome
+  foto = environment.foto
+
+  constructor(
+    private router : Router
+  ) { }
+
+  ngOnInit() {
+    if (environment.token == '') {
+      this.router.navigate(['/login'])
+    }
   }
 
 }

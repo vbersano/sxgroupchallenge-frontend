@@ -1,0 +1,31 @@
+.background {
+    background-image: url('https://i.imgur.com/8xl0WtG.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90vh;
+    height: max-content;
+}
+
+a {
+    text-decoration: none;
+}
+
+.glass {
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.423);
+    backdrop-filter: blur(5.9px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 10px;
+    border-color: #55afd9;
+}
+
+
+.userpfp {
+    border-radius: 20px;
+    width: 75px;
+    height: 75px;
+}
+
+label {
+    margin-top: 10px;
+}

@@ -1,1 +1,95 @@
-<p>inicio works!</p>
+<app-navbar></app-navbar>
+
+<div class="background d-flex justify-content-center align-items-center text-light">
+
+    <div class="container-fluid">
+
+        <div class="row m-5">
+
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="card glass" style="width: 25rem;">
+                        <div class="card-body text-center">
+                            <h1 class="fs-54">Seja <a class="text-info">bem-vind@</a> !</h1>
+
+                            <img src="{{foto}}" alt="user pfp" class="userpfp navpfp pt-2" />
+
+                            <h5 class="fs-54 pt-2">{{nome}}</h5>
+                            <h5 class="fw-400 ">SX Group <a class="text-info">HR Manager</a>.</h5>
+
+                            <div class="pt-2 w-100">
+                                <a type="button" class="btn btn-info mt-1" style="width: 15rem;" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">Cadastrar
+                                    Colaboradores</a>
+                                <a type="button" href="#empresas" class="btn btn-outline-info mt-1 mb-1"
+                                    style="width: 15rem;">Empresas
+                                    Cadastradas</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+<div class="container" id="empresas">
+
+
+</div>
+
+
+<!-- Modal Cadastrar Colaborador -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Cadastrar Colaborador</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Digite o Nome">
+
+                    <label for="cpf">CPF</label>
+                    <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" [mask]="'CPF_CNPJ'" />
+
+                    <label for="email">E-mail</label>
+                    <input type="text" class="form-control" id="email" placeholder="colaborador@email.com">
+
+                    <label for="foto">Link da foto</label>
+                    <input class="form-control mb-2" type="text" name="foto" id="foto"
+                        value="https://i.imgur.com/A6fhZb6.jpg" placeholder="Link da foto">
+
+                    <label for="telefone">Telefone</label>
+                    <input type="text" class="form-control" id="telefone" placeholder="(00) 00000 0000"
+                        [mask]="'(00) 00000-0000'">
+
+                    <div class="form-group" >
+                        <label for="empresa">Selecione a Empresa, ou <a href="" class="text-info">Cadastre uma nova empresa</a> !</label>
+                        <select class="form-control" name="empresa" id="empresa">
+                            <option value="">Empresa</option>
+                        </select>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-info">Cadastrar</button>
+            </div>
+        </div>
+    </div>
+</div>
