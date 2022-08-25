@@ -19,3 +19,24 @@
     object-fit: cover;
     object-position: 50% 0;
 }
+
+a {
+    text-decoration: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #000000; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #55afd9;
+    border-radius: 3px;
+  }
+  

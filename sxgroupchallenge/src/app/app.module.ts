@@ -7,13 +7,19 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AlertasComponent } from './alertas/alertas.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { NavbarmainComponent } from './navbarmain/navbarmain.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    AlertasComponent
+    AlertasComponent,
+    LoginComponent,
+    SignupComponent,
+    NavbarmainComponent
   ],
   imports: [
     BrowserModule,

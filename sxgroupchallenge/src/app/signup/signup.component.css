@@ -1,0 +1,12 @@
+.background {
+    background-image: url('https://i.imgur.com/ojhnvYG.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90vh;
+    width: 100%;
+}
+
+
+a {
+    text-decoration: none;
+}

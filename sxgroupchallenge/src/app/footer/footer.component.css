@@ -6,13 +6,9 @@
 }
 
 .fa:hover {
-    color: #282828;
+    color: #55afd9;
 }
 
 #footer {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
+    position: sticky-bottom;
 }

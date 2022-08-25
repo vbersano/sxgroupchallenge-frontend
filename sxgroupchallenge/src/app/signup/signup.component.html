@@ -1,0 +1,56 @@
+<app-navbarmain></app-navbarmain>
+
+<div class="background d-flex justify-content-center align-items-center">
+
+    <div class="row p-5 m-0">
+
+        <div class="mx-auto d-flex justify-content-center">
+
+            <div class="card text-center bg-dark text-light" style="min-width: 25rem;">
+                <div class="card-body">
+
+                    <div class="row d-flex justify-content-center">
+
+                        <div class="col-md-10 mb-3">
+                            <h3 class="mb-3">Cadastro</h3>
+
+                            <div class="form-group text-start">
+
+                                <label for="usuario">Usuário</label>
+                                <input class="form-control" type="text" name="usuario" id="usuario"
+                                    placeholder="Digite seu E-mail">
+
+                                <label for="foto" style="margin-top: 10px;">Link da foto</label>
+                                <input class="form-control mb-2" type="text" name="foto" id="foto" value="https://i.imgur.com/A6fhZb6.jpg"
+                                    placeholder="Link da foto">
+
+                                <label for="senha" style="margin-top: 10px;">Senha</label>
+                                <input class="form-control mb-2" type="password" name="senha" id="senha"
+                                    placeholder="Digite sua senha">
+
+                                <label for="confirmSenha" style="margin-top: 10px;">Confirmar Senha</label>
+                                <input class="form-control mb-2" type="password" name="confirmSenha" id="confirmSenha"
+                                    placeholder="Confirme sua senha">
+
+                            </div>
+
+                        </div>
+
+                        <hr>
+
+                    </div>
+                    <a type="submit" class="btn btn-outline-info mt-1">Cadastrar</a>
+
+                    <p class="text-center mt-3">Já possui uma conta? <a routerLink="/login">Faça o Login</a> </p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+<app-footer></app-footer>
