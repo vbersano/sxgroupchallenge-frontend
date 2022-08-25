@@ -75,14 +75,14 @@
                     <input type="text" class="form-control" id="telefone" placeholder="(00) 00000 0000"
                         [mask]="'(00) 00000-0000'">
 
-                    <div class="form-group" >
-                        <label for="empresa">Selecione a Empresa, ou <a href="" class="text-info">Cadastre uma nova empresa</a> !</label>
+                    <div class="form-group">
+                        <label for="empresa">Selecione a Empresa, ou <button type="button" class="btn btn-link pb-2"
+                                data-bs-dismiss="modal" routerLink="/empresa">Cadastre uma nova empresa</button>
+                            !</label>
                         <select class="form-control" name="empresa" id="empresa">
                             <option value="">Empresa</option>
                         </select>
                     </div>
-
-
 
                 </div>
             </div>

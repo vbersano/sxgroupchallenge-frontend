@@ -1,0 +1,103 @@
+<app-navbar></app-navbar>
+
+<div class="background d-flex justify-content-center align-items-center">
+
+    <div class="row p-5 m-0">
+
+        <div class="mx-auto d-flex justify-content-center">
+
+            <div class="card text-center glass text-light" style="min-width: 25rem;">
+                <div class="card-body">
+
+                    <div class="row d-flex justify-content-center">
+
+                        <h3 class="m-3">Cadastrar Empresa</h3>
+
+                        <div class="col-md-10 mb-3 pb-2 text-start">
+
+                            <label for="nome">Nome Fantasia</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Digite o Nome">
+
+                            <label for="cpf">CNPJ</label>
+                            <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00"
+                                [mask]="'CPF_CNPJ'" />
+
+                            <label for="email">E-mail</label>
+                            <input type="text" class="form-control" id="email" placeholder="colaborador@email.com">
+
+                            <label for="foto">Logo</label>
+                            <input class="form-control mb-2" type="text" name="foto" id="foto"
+                                value="https://i.imgur.com/A6fhZb6.jpg" placeholder="Link da foto">
+
+                            <label for="telefone">Telefone</label>
+                            <input type="text" class="form-control" id="telefone" placeholder="(00) 00000 0000"
+                                [mask]="'(00) 00000-0000'">
+
+
+                        </div>
+
+                        <hr>
+
+                    </div>
+
+                    <div class="d-flex justify-content-center m-1">
+                        <a routerLink="/mainpage" type="submit" class="btn btn-info me-3">Cadastrar</a>
+                        <a type="submit" class="btn btn-outline-info">Cancelar</a>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="container d-flex justify-content-center text-center bg-dark text-light" style="min-width: 100%; border-bottom: 2px; border-color: white;">
+
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h2>
+                Empresas Cadastradas
+            </h2>
+        </div>
+
+        <div class="row mt-3">
+
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</div>

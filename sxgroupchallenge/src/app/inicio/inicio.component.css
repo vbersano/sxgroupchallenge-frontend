@@ -29,3 +29,12 @@ a {
 label {
     margin-top: 10px;
 }
+
+.btn-link {
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+    text-align: inherit;
+    text-decoration: none;
+    display: inline-block;
+}

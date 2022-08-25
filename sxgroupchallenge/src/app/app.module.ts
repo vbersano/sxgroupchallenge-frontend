@@ -17,6 +17,7 @@ import { NavbarmainComponent } from './navbarmain/navbarmain.component';
 import { AlertasService } from './service/alertas.service';
 import { InicioComponent } from './inicio/inicio.component';
 import { MaskApplierService, NgxMaskModule } from 'ngx-mask';
+import { EmpresaComponent } from './empresa/empresa.component';
 
 
 
@@ -29,7 +30,8 @@ import { MaskApplierService, NgxMaskModule } from 'ngx-mask';
     LoginComponent,
     SignupComponent,
     NavbarmainComponent,
-    InicioComponent
+    InicioComponent,
+    EmpresaComponent
   ],
   imports: [
     BrowserModule,
