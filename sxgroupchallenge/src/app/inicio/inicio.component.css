@@ -38,3 +38,25 @@ label {
     text-decoration: none;
     display: inline-block;
 }
+
+.card-img-top {
+    height: 140px;
+    width: 178;
+    
+  object-fit: cover;
+  object-position: 50% 0;
+}
+
+.card-sq {
+    min-height: 180px;
+    max-height: 180px;
+
+    min-width: 180px;
+    max-width: 180px;
+}
+
+.card-title {
+    font-size: 0.9vw;
+    font-weight: bold;
+    text-justify: auto;
+}

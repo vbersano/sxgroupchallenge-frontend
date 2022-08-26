@@ -21,6 +21,7 @@ import { MaskApplierService, NgxMaskModule } from 'ngx-mask';
 import { EmpresaComponent } from './empresa/empresa.component';
 import { EmpresaEditComponent } from './edit/empresa-edit/empresa-edit.component';
 import { EmpresaDeleteComponent } from './delete/empresa-delete/empresa-delete.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -44,7 +45,8 @@ import { EmpresaDeleteComponent } from './delete/empresa-delete/empresa-delete.c
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    FlexLayoutModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
