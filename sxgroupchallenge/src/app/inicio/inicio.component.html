@@ -23,8 +23,6 @@
                                 <a type="button" class="btn btn-info mt-1" style="width: 15rem;" data-bs-toggle="modal"
                                     data-bs-target="#staticBackdrop">Cadastrar
                                     Colaboradores</a>
-                                <a type="button" href="#empresas" class="btn btn-outline-info mt-1 mb-1"
-                                    style="width: 15rem;">Empresas Cadastradas</a>
                             </div>
 
                         </div>
@@ -78,6 +76,10 @@
                     <input [(ngModel)]="colaborador.telefone" type="text" class="form-control" id="telefone"
                         placeholder="(00) 00000 0000" [mask]="'(00) 00000-0000'">
 
+                    <label for="endereco">Endereço</label>
+                    <input [(ngModel)]="colaborador.endereco" type="text" class="form-control" id="endereco"
+                        placeholder="Insira o endereco">
+
                     <div class="form-group">
                         <label for="empresa">Selecione a Empresa, ou <button type="button" class="btn btn-link pb-2"
                                 data-bs-dismiss="modal" routerLink="/empresa">Cadastre uma nova empresa</button>
@@ -116,7 +118,7 @@
             <div class="card-footer p-1 text-center">
 
                 <a type="button" class="btn btn-outline-light card-title m-0" style="max-width: 170px;"
-                data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="findByIdEmpresa()">
                     {{empresa.nome}} </a>
 
 
@@ -128,22 +130,61 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-xl">
         <div class="modal-content bg-dark text-light">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Base de Dados - Colaboradores</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
             <div class="modal-body">
-                
-                
+
+                <table class="table table-dark table-hover table-bordered table-sm">
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Código</th>
+                            <th scope="col">Foto</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">CPF</th>
+                            <th scope="col">Empresa</th>
+                            <th scope="col">Telefone</th>
+                            <th scope="col">Endereço</th>
+                            <th scope="col">Gerenciar</th>
+
+                        </tr>
+                    </thead>
+
+                    <tbody *ngFor='let empresa of listaEmpresas'>
+                        <tr class="text-center align-items-center" *ngFor='let item of empresa.colaborador'>
+
+
+
+                            <th>{{item.id}}</th>
+                            <th><img src="{{item.foto}}" alt="user pfp" class="userpfp" /></th>
+                            <td>{{item.nome}}</td>
+                            <td>{{item.cpf}}</td>
+                            <td>{{empresa.nome}}</td>
+                            <td>{{item.telefone}}</td>
+                            <td>{{item.endereco}}</td>
+                            <td class="d-flex justify-content-center text-center">
+
+                                <button class="btn btn-info me-1" data-bs-dismiss="modal"
+                                    [routerLink]="['/empresa-edit', empresa.id]">Editar</button>
+                                <button class="btn btn-outline-info" data-bs-dismiss="modal"
+                                    [routerLink]="['/empresa-delete', empresa.id]">Apagar</button>
+
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
 
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-info" data-bs-dismiss="modal">Fechar</button>
             </div>
         </div>
     </div>

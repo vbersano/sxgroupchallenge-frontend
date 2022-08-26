@@ -1,10 +1,10 @@
+import { Colaborador } from './../model/Colaborador';
 import { User } from './../model/User';
 import { EmpresaService } from './../service/empresa.service';
 import { ColaboradorService } from './../service/colaborador.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
-import { Colaborador } from '../model/Colaborador';
 import { Empresa } from '../model/Empresa';
 
 @Component({
@@ -74,6 +74,7 @@ export class InicioComponent implements OnInit {
       this.colaborador = resp
       alert("Colaborador cadastrado com sucesso!")
       this.colaborador = new Colaborador()
+      this.getAllColaboradores()
     }, erro => {
       if (erro.status == 401) {
         alert('Não foi possível criar a postagem, revise os dados!')
