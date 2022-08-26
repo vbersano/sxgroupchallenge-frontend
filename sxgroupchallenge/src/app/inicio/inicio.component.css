@@ -1,5 +1,5 @@
 .background {
-    background-image: url('https://i.imgur.com/8xl0WtG.png');
+    background-image: url('https://i.imgur.com/qaUmo3c.png');
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 90vh;
@@ -44,12 +44,11 @@ label {
     width: 178;
     
   object-fit: cover;
-  object-position: 50% 0;
+  object-position: 50% 50%;
 }
 
 .card-sq {
     min-height: 180px;
-    max-height: 180px;
 
     min-width: 180px;
     max-width: 180px;

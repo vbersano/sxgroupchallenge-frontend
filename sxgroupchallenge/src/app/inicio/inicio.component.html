@@ -1,6 +1,7 @@
 <app-navbar></app-navbar>
 
-<div class="background d-flex justify-content-center align-items-center text-light">
+<div class="background d-flex justify-content-center align-items-center text-light border-bottom border-info"
+    style="border: 2px;">
 
     <div class="container-fluid">
 
@@ -102,20 +103,48 @@
 </div>
 <!-- Modal Cadastrar Colaborador -->
 
-<div class="container d-flex justify-content-center text-center bg-dark text-light "
-    style="min-width: 100%; border-bottom: 2px; border-color: white;" id="empresas"
-    *ngFor="let empresa of listaEmpresas">
+<div class="container border-info  justify-content-center text-center bg-dark text-light pt-0 p-5"
+    style="min-width: 100%;" id="empresas">
 
-    <div class="d-flex flex-wrap justify-content-center">
+    <h1 class="p-3 bg-blue" style="border-end-start-radius: 20px ; border-end-end-radius: 20px">Empresas Cadastradas
+    </h1>
 
-        <div class="card bg-blue text-white border-info m-2 card-sq"
-            *ngFor="let empresa of listaEmpresas">
+    <div class="d-flex justify-content-center w-100 flex-wrap pt-3">
+
+        <div class="card bg-blue text-white border-info m-2 card-sq" *ngFor="let empresa of listaEmpresas">
             <img src="{{empresa.foto}}" class="card-img-top" alt="company logo">
-            <div class="card-footer">
-                <p class="card-title">{{empresa.nome}}</p>
+            <div class="card-footer p-1 text-center">
+
+                <a type="button" class="btn btn-outline-light card-title m-0" style="max-width: 170px;"
+                data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    {{empresa.nome}} </a>
+
+
             </div>
         </div>
 
-
-
     </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                
+                
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

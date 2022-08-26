@@ -22,6 +22,7 @@ import { EmpresaComponent } from './empresa/empresa.component';
 import { EmpresaEditComponent } from './edit/empresa-edit/empresa-edit.component';
 import { EmpresaDeleteComponent } from './delete/empresa-delete/empresa-delete.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -46,7 +47,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     HttpClientModule,
     FormsModule,
     NgxMaskModule.forRoot(),
-    FlexLayoutModule
+    FlexLayoutModule,
+    BrowserAnimationsModule,
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
