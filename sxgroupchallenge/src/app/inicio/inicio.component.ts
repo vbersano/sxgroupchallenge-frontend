@@ -18,8 +18,8 @@ export class InicioComponent implements OnInit {
   colaborador: Colaborador = new Colaborador
   listaEmpresas: Empresa[]
   listaColaborador: Colaborador[]
+  
   idEmpresa: number
-
   user: User = new User
   idUser = environment.id
 

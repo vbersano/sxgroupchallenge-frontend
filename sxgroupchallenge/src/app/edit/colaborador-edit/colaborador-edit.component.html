@@ -1,0 +1,86 @@
+<app-navbar></app-navbar>
+
+<div class="background d-flex justify-content-center align-items-center">
+
+    <div class="row p-5 m-0">
+
+        <div class="mx-auto d-flex justify-content-center">
+
+            <div class="card text-center glass text-light" style="min-width: 25rem;">
+                <div class="card-body">
+
+                    <div class="row d-flex justify-content-center">
+
+                        <h3 class="m-3">Atualizar dados do Colaborador</h3>
+
+
+                        <div class="col-md-10 mb-3 pb-2 text-start">
+
+                            <div class=" d-flex justify-content-center">
+
+                                <img src="{{colaborador.foto}}" alt="user pfp" class="userpfp navpfp" />
+
+                            </div>
+
+                            <label for="nome">Nome</label>
+                            <input [(ngModel)]="colaborador.nome" type="text" class="form-control" id="nome"
+                                placeholder="Digite o Nome">
+
+                            <label for="cnpj">CPF</label>
+                            <input [(ngModel)]="colaborador.cpf" class="form-control mb-2" type="text" name="cnpj"
+                                id="cnpj" placeholder="Insira o CNPJ" [mask]="'CPF_CNPJ'">
+
+                            <label for="email">E-mail</label>
+                            <input [(ngModel)]="colaborador.email" type="text" class="form-control" id="email"
+                                placeholder="colaborador@email.com">
+
+                            <label for="foto">Foto</label>
+                            <input [(ngModel)]="colaborador.foto" class="form-control mb-2" type="text" name="foto"
+                                id="foto" value="https://i.imgur.com/A6fhZb6.jpg" placeholder="Link da foto">
+
+                            <label for="telefone">Telefone</label>
+                            <input [(ngModel)]="colaborador.telefone" type="text" class="form-control" id="telefone"
+                                placeholder="(00) 00000 0000" [mask]="'(00) 00000-0000'">
+
+                            <label for="endereco">Endereço</label>
+                            <input [(ngModel)]="colaborador.endereco" class="form-control mb-2" type="text"
+                                name="endereco" id="endereco" placeholder="Insira o endereço">
+
+                            <div class="form-group">
+                                <label for="empresa">Selecione a Empresa, ou <button type="button"
+                                        class="btn btn-link pb-2" data-bs-dismiss="modal" routerLink="/empresa">Cadastre
+                                        uma nova empresa</button>
+                                    !</label>
+
+                                <select class="form-control" name="empresa" id="empresa" [(ngModel)]='idEmpresa'
+                                    (change)="findByIdEmpresa()">
+                                    <option *ngFor="let empresa of listaEmpresas" value="{{empresa.id}}">
+                                        {{empresa.nome}}
+                                    </option>
+                                </select>
+
+                            </div>
+
+
+                        </div>
+
+                        <hr>
+
+                    </div>
+
+                    <div class="d-flex justify-content-center m-1">
+                        <a routerLink="/mainpage" type="submit" class="btn btn-outline-info me-3"
+                            routerLink="/mainpage">Cancelar</a>
+
+                        <a type="submit" class="btn btn-info" (click)="atualizar()">Atualizar</a>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

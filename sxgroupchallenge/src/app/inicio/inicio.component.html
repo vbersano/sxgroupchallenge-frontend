@@ -169,10 +169,10 @@
                             <td>{{item.endereco}}</td>
                             <td class="d-flex justify-content-center text-center">
 
-                                <button class="btn btn-info me-1" data-bs-dismiss="modal"
-                                    [routerLink]="['/empresa-edit', empresa.id]">Editar</button>
-                                <button class="btn btn-outline-info" data-bs-dismiss="modal"
-                                    [routerLink]="['/empresa-delete', empresa.id]">Apagar</button>
+                                <button [routerLink]="['/colaborador-edit', item.id]" class="btn btn-info me-1"
+                                    data-bs-dismiss="modal">Editar</button>
+                                <button [routerLink]="['/colaborador-delete', item.id]" class="btn btn-outline-info"
+                                    data-bs-dismiss="modal">Apagar</button>
 
                             </td>
                         </tr>

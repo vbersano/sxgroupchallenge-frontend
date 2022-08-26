@@ -1,0 +1,50 @@
+.background {
+    background-image: url('https://i.imgur.com/2589u39.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90vh;
+    height: max-content;
+}
+
+a {
+    text-decoration: none;
+}
+
+.glass {
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.423);
+    backdrop-filter: blur(5.9px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 10px;
+    border-color: #55afd9;
+}
+
+
+.userpfp {
+    border-radius: 20px;
+    width: 80px;
+    height: 80px;
+}
+
+label {
+    margin-top: 10px;
+}
+
+.btn-link {
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+    text-align: inherit;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.in-shadow {
+    box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.5);
+}
+
+.userpfp.navpfp {
+    border-radius: 15%;
+    width: 100px;
+    height: 100px;
+}

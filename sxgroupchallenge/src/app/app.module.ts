@@ -23,6 +23,8 @@ import { EmpresaEditComponent } from './edit/empresa-edit/empresa-edit.component
 import { EmpresaDeleteComponent } from './delete/empresa-delete/empresa-delete.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ColaboradorEditComponent } from './edit/colaborador-edit/colaborador-edit.component';
+import { ColaboradorDeleteComponent } from './delete/colaborador-delete/colaborador-delete.component';
 
 
 
@@ -38,7 +40,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     InicioComponent,
     EmpresaComponent,
     EmpresaEditComponent,
-    EmpresaDeleteComponent
+    EmpresaDeleteComponent,
+    ColaboradorEditComponent,
+    ColaboradorDeleteComponent
   ],
   imports: [
     BrowserModule,

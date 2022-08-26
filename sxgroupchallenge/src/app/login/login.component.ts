@@ -1,3 +1,5 @@
+import { Colaborador } from './../model/Colaborador';
+import { ColaboradorService } from './../service/colaborador.service';
 import { FooterComponent } from './../footer/footer.component';
 import { AuthService } from './../service/auth.service';
 import { Component, OnInit } from '@angular/core';
@@ -12,15 +14,25 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class LoginComponent implements OnInit {
 
-  userLogin: UserLogin = new UserLogin();
+  userLogin: UserLogin = new UserLogin()
+  listaColaborador: Colaborador[]
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private colaboradorService: ColaboradorService
   ) { }
 
   ngOnInit() {
     window.scroll(0, 0)
+
+    this.getAllColaboradores()
+  }
+
+  getAllColaboradores() {
+    this.colaboradorService.getAllColaboradores().subscribe((resp: Colaborador[]) => {
+      this.listaColaborador = resp
+    })
   }
 
   entrar() {
