@@ -1,4 +1,4 @@
-<app-navbarmain></app-navbarmain>
+<app-navbar></app-navbar>
 
 <div class="background d-flex justify-content-center align-items-center">
 
@@ -6,51 +6,51 @@
 
         <div class="mx-auto d-flex justify-content-center">
 
-            <div class="card text-center bg-dark text-light" style="min-width: 25rem;">
+            <div class="card text-center glass text-light" style="min-width: 25rem;">
                 <div class="card-body">
 
                     <div class="row d-flex justify-content-center">
 
-                        <div class="col-md-10 mb-3">
-                            <h3 class="mb-3">Cadastro</h3>
+                        <h3 class="m-3">Atualizar dados do Usuário</h3>
 
-                            <div class="form-group text-start">
 
+                        <div class="col-md-10 mb-3 pb-2 text-start">
+
+                            <div class=" d-flex justify-content-center">
+
+                                <img src="{{foto}}" alt="user pfp" class="userpfp navpfp" />
+
+                            </div>
+
+                            <div class="col-md-10 mb-3">
+    
                                 <div class="form-group text-start">
+    
                                     <label for="usuario">Usuário</label>
                                     <input [(ngModel)]='user.usuario' class="form-control" type="text" name="usuario"
                                         id="usuario" placeholder="Digite seu E-mail">
-                                </div>
-
-                                <div class="form-group text-start">
+    
+    
                                     <label for="nome" style="margin-top: 10px;">Nome</label>
-                                    <input [(ngModel)]='user.nome' class="form-control" type="text" name="nome"
-                                        id="nome" placeholder="Digite seu nome">
-                                    <small class="text-secondary p-0 m-0">min: 2 characteres | max: 15
-                                        characteres</small>
-                                </div>
-
-                                <div class="form-group text-start">
+                                    <input [(ngModel)]='user.nome' class="form-control" type="text" name="nome" id="nome"
+                                        placeholder="Digite seu nome">
+    
                                     <label for="foto" style="margin-top: 10px;">Link da foto</label>
                                     <input [(ngModel)]='user.foto' class="form-control mb-2" type="text" name="foto"
                                         id="foto" value="https://i.imgur.com/A6fhZb6.jpg" placeholder="Link da foto">
-                                </div>
-
-                                <div class="form-group text-start">
+    
                                     <label for="senha" style="margin-top: 10px;">Senha</label>
                                     <input (input)="confirmSenha($event)" class="form-control mb-2" type="password"
                                         name="senha" id="senha" placeholder="Digite sua senha">
-                                </div>
-
-                                <div class="form-group text-start">
+    
                                     <label for="confirmSenha" style="margin-top: 10px;">Confirmar Senha</label>
-                                    <input [(ngModel)]='user.senha' class="form-control" type="password"
+                                    <input [(ngModel)]='user.senha' class="form-control mb-2" type="password"
                                         name="confirmSenha" id="confirmSenha" placeholder="Confirme sua senha">
-                                        <small class="text-secondary p-0 mb-2">min: 8 characteres | max: 15
-                                            characteres</small>
+    
                                 </div>
-
+    
                             </div>
+
 
                         </div>
 
@@ -58,9 +58,13 @@
 
                     </div>
 
-                    <a type="submit" class="btn btn-outline-info mt-1" (click)="cadastrar()">Cadastrar</a>
+                    <div class="d-flex justify-content-center m-1">
+                        <a routerLink="/mainpage" type="submit" class="btn btn-outline-info me-3"
+                            routerLink="/mainpage">Cancelar</a>
 
-                    <p class="text-center mt-3">Já possui uma conta? <a routerLink="/login">Faça o Login</a> </p>
+                        <a type="submit" class="btn btn-info" (click)="atualizar()">Atualizar</a>
+                    </div>
+
 
                 </div>
             </div>
@@ -68,6 +72,5 @@
         </div>
 
     </div>
-
 
 </div>

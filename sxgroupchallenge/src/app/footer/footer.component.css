@@ -6,9 +6,13 @@
 }
 
 .fa:hover {
-    color: #55afd9;
+    color: rgb(69, 69, 69);
 }
 
 #footer {
     position: sticky-bottom;
+}
+
+a {
+    text-decoration: none;
 }

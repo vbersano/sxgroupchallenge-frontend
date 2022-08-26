@@ -25,6 +25,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ColaboradorEditComponent } from './edit/colaborador-edit/colaborador-edit.component';
 import { ColaboradorDeleteComponent } from './delete/colaborador-delete/colaborador-delete.component';
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
 
 
 
@@ -42,7 +43,8 @@ import { ColaboradorDeleteComponent } from './delete/colaborador-delete/colabora
     EmpresaEditComponent,
     EmpresaDeleteComponent,
     ColaboradorEditComponent,
-    ColaboradorDeleteComponent
+    ColaboradorDeleteComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,

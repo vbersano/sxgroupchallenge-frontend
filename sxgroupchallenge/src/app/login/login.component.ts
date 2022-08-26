@@ -26,6 +26,8 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     window.scroll(0, 0)
 
+    alert('Seja bem vindo(a) ao site do desafio fullstack do Grupo SX. O presente projeto é hospedado em um servidor gratuito,sendo assim, ele pode demorar um pouquinho para responder as requisições, caso não queira se cadastrar, aqui vai um login para testes!!!  login: teste@gmail.com senha: 123456789 Obrigado!')
+
     this.getAllColaboradores()
   }
 

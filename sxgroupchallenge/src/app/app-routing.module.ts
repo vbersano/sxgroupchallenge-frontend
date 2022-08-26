@@ -1,3 +1,4 @@
+import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { ColaboradorEditComponent } from './edit/colaborador-edit/colaborador-edit.component';
 import { ColaboradorDeleteComponent } from './delete/colaborador-delete/colaborador-delete.component';
 import { EmpresaDeleteComponent } from './delete/empresa-delete/empresa-delete.component';
@@ -19,8 +20,8 @@ const routes: Routes = [
   { path: 'empresa-edit/:id', component: EmpresaEditComponent },
   { path: 'colaborador-edit/:id', component: ColaboradorEditComponent },
   { path: 'empresa-delete/:id', component: EmpresaDeleteComponent },
-  { path: 'colaborador-delete/:id', component: ColaboradorDeleteComponent }
-
+  { path: 'colaborador-delete/:id', component: ColaboradorDeleteComponent },
+  { path: 'user-edit/:id', component: UserEditComponent },
 ];
 
 @NgModule({

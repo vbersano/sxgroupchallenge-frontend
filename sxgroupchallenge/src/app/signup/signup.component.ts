@@ -3,6 +3,7 @@ import { AlertasService } from './../service/alertas.service';
 import { User } from './../model/User';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-signup',
@@ -10,6 +11,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
+
+  nome = environment.nome
+  foto = environment.foto
 
   user: User = new User
   confirmarSenha: string
@@ -21,7 +25,7 @@ export class SignupComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0, 0)
-
+    
   }
 
   confirmSenha(event: any) {
